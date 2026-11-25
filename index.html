@@ -1,0 +1,571 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="An independent student data story exploring how much people spend on food in the UK.">
+
+  <title>The UK food bill | A data story</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+
+  <header class="masthead">
+
+    <div class="masthead-inner">
+
+      <a class="brand" href="#top">
+        the food <span>brief.</span>
+      </a>
+
+      <span class="masthead-note">
+        AN INDEPENDENT STUDENT DATA STORY · INSPIRED BY THE GUARDIAN
+      </span>
+
+    </div>
+
+    <nav aria-label="Main navigation">
+      <a href="#story">The story</a>
+      <a href="#explore">Explore the data</a>
+      <a href="#sources">Sources</a>
+    </nav>
+
+  </header>
+
+
+  <main id="top">
+
+
+    <section class="hero" id="story">
+
+      <div class="hero-text">
+
+        <p class="eyebrow">
+          COST OF LIVING / UNITED KINGDOM
+        </p>
+
+        <h1>
+          What's on<br>
+          Britain's <em>food bill?</em>
+        </h1>
+
+        <p class="lead">
+          From the weekly supermarket shop to eating out,
+          the latest government figures reveal where the money
+          goes — and how spending has changed.
+        </p>
+
+        <div class="byline">
+
+          <span class="avatar">YR</span>
+
+          <span>
+            By <strong>Youness Rahhouti</strong><br>
+            <small>Data story · November 2026</small>
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-art"
+           role="img"
+           aria-label="Stylised illustration of a grocery bag, food and a receipt">
+
+        <div class="hero-circle"></div>
+
+        <div class="grocery">
+
+          <span class="bag-handle"></span>
+
+          <span class="bag-label">
+            FOOD<br>SHOP
+          </span>
+
+        </div>
+
+        <div class="receipt">
+
+          <span>YOUR RECEIPT</span>
+
+          <hr>
+
+          <span>GROCERIES</span>
+          <b>£33.63</b>
+
+          <span>EATING OUT</span>
+          <b>£9.87</b>
+
+          <hr>
+
+          <strong>TOTAL&nbsp; £43.50</strong>
+
+        </div>
+
+        <div class="tomato"></div>
+        <div class="leaf"></div>
+
+        <p class="art-caption">
+          A weekly snapshot, per person
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <section class="intro content-width">
+
+      <p class="dropcap">
+        Food is one of the unavoidable costs of everyday life.
+        But how much does the average person in the United Kingdom
+        actually spend on it?
+
+        The government's <em>Family Food</em> survey gives us
+        a clearer picture of food bought for home and meals
+        eaten outside.
+      </p>
+
+      <p>
+        For the financial year ending March 2025, the survey
+        estimates <strong>£43.50 per person each week</strong>
+        for food and non-alcoholic drinks, after adjusting
+        spending figures for general inflation.
+
+        This includes both food consumed at home and food eaten out.
+      </p>
+
+    </section>
+
+
+
+    <section class="stats-band" aria-label="Key statistics">
+
+      <div class="stats-inner">
+
+        <div>
+
+          <span class="stat-label">
+            TOTAL FOOD & SOFT DRINKS
+          </span>
+
+          <strong>£43.50</strong>
+
+          <small>
+            per person / week · 2025
+          </small>
+
+        </div>
+
+
+        <div>
+
+          <span class="stat-label">
+            FOR CONSUMPTION AT HOME
+          </span>
+
+          <strong>£33.63</strong>
+
+          <small>
+            per person / week · 2025
+          </small>
+
+        </div>
+
+
+        <div>
+
+          <span class="stat-label">
+            EATEN OUTSIDE THE HOME
+          </span>
+
+          <strong>£9.87</strong>
+
+          <small>
+            per person / week · 2025
+          </small>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section class="story-section content-width">
+
+      <div class="section-marker">
+        01 / THE BIG PICTURE
+      </div>
+
+      <h2>
+        Most food spending still happens
+        <em>at home.</em>
+      </h2>
+
+      <p>
+        In 2025, around
+        <strong>77% of spending on food and non-alcoholic drinks</strong>
+        went towards food and drink for consumption at home,
+        compared with about 23% for eating out.
+
+        The figures describe average spending per person,
+        not the cost of a typical household's entire shopping basket.
+      </p>
+
+
+      <div class="split-chart">
+
+        <div class="donut"
+             role="img"
+             aria-label="77.3% spending on food for home; 22.7% on eating out">
+
+          <div>
+
+            <strong>77%</strong>
+
+            <span>at home</span>
+
+          </div>
+
+        </div>
+
+
+        <div class="split-legend">
+
+          <p>
+
+            <span class="swatch green"></span>
+
+            <strong>£33.63</strong>
+
+            · Food for home
+
+          </p>
+
+
+          <p>
+
+            <span class="swatch coral"></span>
+
+            <strong>£9.87</strong>
+
+            · Eating out
+
+          </p>
+
+
+          <small>
+            2025 real-terms spending, per person per week.
+            Rounded share; total £43.50.
+          </small>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+
+    <section class="explore" id="explore">
+
+      <div class="explore-inner">
+
+        <div class="section-marker">
+          02 / INTERACTIVE DATA
+        </div>
+
+        <h2>
+          How has the weekly bill
+          <em>changed?</em>
+        </h2>
+
+
+        <p class="explore-intro">
+          Between 2022 and 2025, spending on eating out
+          increased from £8.07 to £9.87 per person per week.
+          This represents an increase of approximately 22.3%,
+          while spending on food consumed at home remained
+          relatively stable, rising from £33.45 to £33.63.
+          This suggests that eating out is taking a growing
+          share of the British food budget.
+        </p>
+
+        <p class="explore-intro">
+          Explore the interactive chart below to compare
+          both categories, change the period and discover
+          the exact spending figures for each year.
+        </p>
+
+
+        <div class="chart-card">
+
+          <div class="chart-top">
+
+            <div>
+
+              <p class="eyebrow">
+                UK / PER PERSON PER WEEK
+              </p>
+
+              <h3>
+                Food and non-alcoholic drink spending
+              </h3>
+
+            </div>
+
+
+
+            <div class="controls">
+
+              <label for="category">
+                Show spending
+              </label>
+
+              <select id="category">
+
+                <option value="both">
+                  Home & eating out
+                </option>
+
+                <option value="home">
+                  At home only
+                </option>
+
+                <option value="out">
+                  Eating out only
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="range-controls" aria-label="Select year range">
+
+            <button
+              type="button"
+              class="active"
+              data-range="all"
+              aria-pressed="true">
+
+              2022–2025
+
+            </button>
+
+
+            <button
+              type="button"
+              data-range="recent"
+              aria-pressed="false">
+
+              2024–2025
+
+            </button>
+
+          </div>
+
+
+
+          <div class="canvas-wrap">
+
+            <canvas
+              id="spendingChart"
+              role="img"
+              aria-label="Interactive line chart of UK food spending in pounds per person per week from 2022 to 2025">
+            </canvas>
+
+          </div>
+
+
+
+
+          <p
+            id="chartDetail"
+            class="chart-detail"
+            aria-live="polite">
+
+            Tip: hover over or click a data point for its exact value.
+            Click the legend to hide a line.
+
+          </p>
+
+
+
+          <p class="chart-footnote">
+
+            Source: Defra,
+            <em>Family Food FYE 2025</em>,
+            Table 1.2.
+
+            £ per person per week, adjusted for inflation
+            using CPIH.
+
+            The chart shows home spending and eating out
+            separately, not a combined total.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section class="story-section content-width">
+
+      <div class="section-marker">
+        03 / THE TAKEAWAY
+      </div>
+
+      <h2>
+        Eating out is taking a
+        <em>larger share.</em>
+      </h2>
+
+      <p>
+        Between 2022 and 2025, weekly spending on food
+        and non-alcoholic drinks eaten outside the home
+        rose from <strong>£8.07 to £9.87</strong>
+        in real terms.
+
+        Spending on food for home moved from
+        <strong>£33.45 to £33.63</strong>
+        over the same period.
+      </p>
+
+
+      <blockquote>
+        “The food bill is more than a price tag:
+        it tells a story about where — and how — people eat.”
+      </blockquote>
+
+
+
+      <p>
+        These figures show that although the majority
+        of food spending still happens at home,
+        eating out represents a growing share of
+        the British food budget.
+      </p>
+
+      <p>
+        However, these numbers are national averages.
+        Individual spending can vary depending on income,
+        household size, location and lifestyle.
+      </p>
+
+      <p>
+        The figures have been adjusted for general
+        inflation, making comparisons between years
+        more meaningful. However, spending data alone
+        cannot tell us whether people are consuming
+        more food or changing the types of products
+        they purchase.
+      </p>
+
+    </section>
+
+
+
+    <section class="source-section" id="sources">
+
+      <div class="content-width">
+
+        <div class="section-marker">
+          DATA & METHODOLOGY
+        </div>
+
+        <h2>
+          Where do the numbers come from?
+        </h2>
+
+        <p>
+          Figures are from the UK Department for Environment,
+          Food & Rural Affairs (Defra),
+
+          <em>Family Food FYE 2025</em>,
+
+          based on the Living Costs and Food Survey.
+
+          About 5,000 households are surveyed each year.
+
+          We use Table 1.2, which reports spending on food
+          and non-alcoholic drinks in real terms.
+
+          The financial year ending 2025 covers
+          April 2024–March 2025.
+
+          Values shown are per person, not per household.
+        </p>
+
+
+        <a
+          class="source-link"
+          href="https://www.gov.uk/government/statistics/family-food-fye-2025/family-food-fye-2025"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Read the original government report ↗
+
+        </a>
+
+
+        <p class="disclaimer">
+          Independent educational project inspired by
+          The Guardian's editorial approach.
+
+          Not produced by or affiliated with The Guardian.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <footer>
+
+    <div>
+
+      <span class="brand">
+        the food <span>brief.</span>
+      </span>
+
+      <small>
+        Data storytelling · SAE 303-2 · Youness Rahhouti
+      </small>
+
+    </div>
+
+
+    <a href="#top">
+      Back to top ↑
+    </a>
+
+  </footer>
+
+</body>
+
+</html>
