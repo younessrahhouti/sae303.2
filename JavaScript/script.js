@@ -1,5 +1,7 @@
 
-
+ // Données des dépenses alimentaires au Royaume-Uni de 2022 à 2025
+ // Source : Defra, Family Food FYE 2025
+ // Montants en livres sterling par personne et par semaine
 const spending = {
   years: [2022, 2023, 2024, 2025],
   home: [33.45, 32.32, 33.33, 33.63],
@@ -7,15 +9,18 @@ const spending = {
 };
 
 
+// Récupération des éléments HTML pour gérer les interactions
 const categorySelect = document.querySelector('#category');
 
 const rangeButtons = document.querySelectorAll('[data-range]');
 
 const detail = document.querySelector('#chartDetail');
 
+// Période affichée par défaut
 let selectedRange = 'all';
 
 
+// Création du graphique en lignes avec Chart.js
 const chart = new Chart(document.querySelector('#spendingChart'), {
 
   type: 'line',
@@ -37,6 +42,7 @@ const chart = new Chart(document.querySelector('#spendingChart'), {
     },
 
 
+    // Afficher les détails quand l'utilisateur clique sur un point
     onClick: (event, elements, chartInstance) => {
 
       if (!elements.length) return;
@@ -61,6 +67,7 @@ const chart = new Chart(document.querySelector('#spendingChart'), {
     plugins: {
 
 
+      // Légende pour identifier et masquer les courbes
       legend: {
         position: 'bottom',
 
@@ -71,6 +78,7 @@ const chart = new Chart(document.querySelector('#spendingChart'), {
       },
 
 
+      // Afficher le montant exact quand la souris passe sur un point
       tooltip: {
 
         callbacks: {
@@ -85,6 +93,7 @@ const chart = new Chart(document.querySelector('#spendingChart'), {
     },
 
 
+    // Configuration des axes du graphique
     scales: {
 
       y: {
@@ -117,6 +126,7 @@ const chart = new Chart(document.querySelector('#spendingChart'), {
 });
 
 
+// Fonction qui modifie le graphique selon les choix de l'utilisateur
 function updateChart() {
 
   const first = selectedRange === 'recent' ? 2 : 0;
@@ -128,6 +138,7 @@ function updateChart() {
   const datasets = [];
 
 
+  // Ajouter les données des dépenses à domicile
   if (choice === 'both' || choice === 'home') {
 
     datasets.push({
@@ -154,6 +165,7 @@ function updateChart() {
 
 
 
+  // Ajouter les données des repas à l'extérieur
   if (choice === 'both' || choice === 'out') {
 
     datasets.push({
@@ -180,12 +192,14 @@ function updateChart() {
 
 
 
+  // Remplacer les données et actualiser le graphique
   chart.data.datasets = datasets;
 
   chart.update();
 
 
 
+  // Réinitialiser le message affiché sous le graphique
   detail.textContent =
     'Tip: hover over or click a data point for its exact value. Click the legend to hide a line.';
 
@@ -193,10 +207,12 @@ function updateChart() {
 
 
 
+// Mettre à jour le graphique quand l'utilisateur change de catégorie
 categorySelect.addEventListener('change', updateChart);
 
 
 
+// Détecter les clics sur les boutons pour changer la période
 rangeButtons.forEach(button => {
 
   button.addEventListener('click', () => {
